@@ -81,7 +81,7 @@ services:
     volumes:
       - ./www/web:/var/www
     ports:
-      - "9501:9501"
+      - "9500:9500"
     networks:
       - microservice
     tty: true

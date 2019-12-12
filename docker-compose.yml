@@ -49,7 +49,7 @@ services:
     build:
       context: .
     container_name: "microservice-1"
-    command: "php bin/hyperf.php start"
+    command: "./DockerRun.sh"
     depends_on:
       - "consul-server-leader"
     volumes:
@@ -62,7 +62,7 @@ services:
     build:
       context: .
     container_name: "microservice-2"
-    command: "php bin/hyperf.php start"
+    command: "./DockerRun.sh"
     depends_on:
       - "consul-server-leader"
     volumes:
@@ -75,7 +75,7 @@ services:
     build:
       context: .
     container_name: "app"
-    command: "php bin/hyperf.php start"
+    command: "./DockerRun.sh"
     depends_on:
       - "microservice-1"
     volumes:
